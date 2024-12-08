@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "birdnet-observation-station"
+version = "0.0.1"
+
+requires-python = ">= 3.11"
+
+dependencies = ["pyaudio ~= 0.2.14"]
+
+
+[project.scripts]
+birdnet-observation-station = "birdnet_observation_station.main:main"
