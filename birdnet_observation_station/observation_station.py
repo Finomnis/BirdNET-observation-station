@@ -67,7 +67,7 @@ class ObservationStation:
     def __enter__(self) -> "ObservationStation":
         log.info("Open audio stream")
         self.analyzer = Analyzer()
-        self.stream = RecordingStream(self.analyzer, rate=48000, chunk_duration=3.0, min_conf=0.2)
+        self.stream = RecordingStream(self.analyzer, rate=48000, chunk_duration=3.0, min_conf=0.6)
         return self
     def __exit__(self, type, value, traceback):
         log.info("Close audio stream")
